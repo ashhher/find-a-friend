@@ -38,14 +38,14 @@ class SignUp extends React.Component {
          this.state = {
              email: "",
              password: "",
-             fistname: "",
-             lasname: "",
+             firstname: "",
+             lastname: "",
              success: false,
              login: false,
              uid: null
          };
          this.handleChange  = this.handleChange.bind(this);
-         this.handleSubmit = this.handleSubmit(this);
+         this.handleSubmit = this.handleSubmit.bind(this);
          this.redirectToLogIn = this.redirectToLogIn.bind(this);
      }
 
