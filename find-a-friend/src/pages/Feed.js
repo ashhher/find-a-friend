@@ -43,7 +43,7 @@ class UploadDialog extends React.Component{
         this.setState({attachment:event.target.files[0]})
     }
 
-    handleSubmit(event){
+    handleSubmit(){
         this.props.onClose();
     }
 
@@ -123,7 +123,7 @@ class Feed extends React.Component{
                             what's on your mind?
                         </p>
                     </Box>
-                    <UploadDialog open = {this.state.posting} onClick = {this.closePostModal}/>
+                    <UploadDialog open = {this.state.posting} onClose = {this.closePostModal}/>
                 </Box>
             </div>
         )
