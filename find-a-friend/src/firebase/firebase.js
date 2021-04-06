@@ -31,6 +31,10 @@ class Firebase {
         .catch(this.debugError);
     }
 
+    readDatabase(root, event, callback) {
+        this.database.ref(root).on(event, callback);
+    }
+
     onUserActive(callback, fallback=null) {
         this.auth.onAuthStateChanged((userInstance) => {
             if(userInstance != null) {

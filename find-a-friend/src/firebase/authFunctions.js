@@ -28,6 +28,12 @@ class AuthFunctions extends Firebase {
         this.auth.signInWithEmailAndPassword(email, pwd)
         .catch(this.debugError);
     }
+
+    logOut(callback) {
+        this.auth.signOut()
+        .then(callback)
+        .catch(this.debugError);
+    }
 }
 
 const authFunctions = new AuthFunctions();
